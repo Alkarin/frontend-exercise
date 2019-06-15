@@ -4,19 +4,58 @@
   align-items: center;
 
   background: var(--color-bg);
-  padding: 50px 100px;
 
   box-shadow: 0 3px 3px var(--color-shadow);
+
+  /* Create fixed header */
+  z-index: 4;
+  position: fixed;
+  width: 100%;
+  transition: 0.2s;
+  font-size: 20px;
+  height: 134px;
 }
 
 .header .logo-container {
   height: 134px;
   width: 134px;
   background: url("../assets/logo.png");
-
-  margin-right: 32px;
+  /* Create more responsive logo image */
+  background-size: 75%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.2s;
 }
 
 .header h1 {
   flex-grow: 1;
+}
+
+/* align logo with body content */
+.logo-container {
+  margin-left: 80px;
+}
+
+/* add padding to export buttons */
+.export-buttons {
+  padding-right: 2%;
+}
+
+/* Center Export text */
+.export-buttons-title {
+  text-align: center;
+  margin: 10px;
+}
+
+/* additional header css class when scrolling content */
+.content-header {
+  transition: 0.2s;
+  font-size: 12px;
+  height: 100px;
+}
+
+/* additional logo css class when scrolling content */
+.content-logo {
+  background-size: 50% !important;
+  transition: 0.2s;
 }

@@ -8,6 +8,17 @@
 
   border: 3px dashed var(--color-text);
   border-radius: 2px;
+  cursor: pointer;
+
+  /* Set default opacity and transition */
+  opacity: .5;
+  transition: 0.3s;
+}
+
+/* Add opacity transition effect on hover */
+.add-range:hover{
+  opacity: 1;
+  transition: 0.3s;
 }
 
 .add-range .fa-plus-circle {

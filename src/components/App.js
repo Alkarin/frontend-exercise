@@ -30,10 +30,29 @@ export default class App {
     const header = new Header();
     const content = new Content();
 
-    pageContainer.appendChild(header.getElement());
     pageContainer.appendChild(content.getElement());
 
+    // Separate header from page container, as it is now a fixed element, and should not be calculated in handlePageScroll()
     this._root.appendChild(sidebar.getElement());
+    this._root.appendChild(header.getElement());
     this._root.appendChild(pageContainer);
+
+    pageContainer.addEventListener(
+        'scroll',
+        () => App.handlePageScroll()
+    );
+  }
+
+  static handlePageScroll() {
+    let page = document.querySelector('.page');
+    let header = document.querySelector('.header');
+    let headerLogo = document.querySelector('.logo-container');
+      if (page.scrollTop > 0) {
+        header.classList.add('content-header');
+        headerLogo.classList.add('content-logo');
+      } else {
+        header.classList.remove('content-header');
+        headerLogo.classList.remove('content-logo');
+      }
   }
 }

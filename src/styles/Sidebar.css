@@ -9,8 +9,8 @@
   flex-direction: column;
 
   background: var(--color-primary);
-  padding: 32px;
-
+  /* Add responsive padding */
+  padding: 1%;
   box-shadow: 3px 0 3px var(--color-shadow);
   z-index: 5;
 }

@@ -10,3 +10,10 @@
 .pie-chart-card h4 {
   margin-top: 0;
 }
+
+@media screen and (max-width: 1200px) {
+  /* Remove margin when using vertical layout to match row widths */
+  .pie-chart-card {
+    margin-right: 0;
+  }
+}

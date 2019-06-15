@@ -1,5 +1,6 @@
 .content {
-  padding: 50px 100px;
+  /* factor in additional padding for fixed header */
+  padding: 150px 100px;
 }
 
 .content .store-container {
@@ -25,4 +26,15 @@
 
 .content .range-card-container > *:last-child {
   margin-right: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  /* Swap to vertical layout */
+  .content .store-container {
+    flex-direction: column;
+  }
+
+  .content .store-container .store-column {
+    margin-bottom: 32px;
+  }
 }

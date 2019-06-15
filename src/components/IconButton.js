@@ -21,7 +21,8 @@ export default class IconButton {
     this._button.className = "icon-button";
 
     const icon = document.createElement("i");
-    icon.className = `fas fa-${this._iconName} fa-3x`;
+    // Adjust icon sizes to be fit the UI better
+    icon.className = `fas fa-${this._iconName} fa-2x`;
     this._button.appendChild(icon);
 
     return this._button;
