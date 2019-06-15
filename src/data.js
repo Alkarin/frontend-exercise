@@ -5,7 +5,7 @@ export default [
     upperRange: 5500
   },
   {
-    title: "",
+    title: "Additional Titles",
     value: 0,
     upperRange: 1
   },
